@@ -25,7 +25,12 @@ Route::group(['middleware' => ['isVerified', 'auth'], 'prefix'=>'admin'], functi
 
     Route::get('user/{id}/verify', 'UserController@verify')->name('user.verify');
 
-    Route::get('user/{id}/block', 'UserController@block')->name('user.block');
+	Route::get('user/{id}/block', 'UserController@block')->name('user.block');
+	
+	Route::resource('user', 'UserController', ['except' => ['show']]);
+	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);
+	Route::put('profile', ['as' => 'profile.update', 'uses' => 'ProfileController@update']);
+	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
 
 	Route::get('table-list', function () {
 		return view('pages.table_list');
@@ -56,10 +61,4 @@ Route::group(['middleware' => ['isVerified', 'auth'], 'prefix'=>'admin'], functi
 	})->name('upgrade');
 });
 
-Route::group(['middleware' => 'auth'], function () {
-	Route::resource('user', 'UserController', ['except' => ['show']]);
-	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);
-	Route::put('profile', ['as' => 'profile.update', 'uses' => 'ProfileController@update']);
-	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
-});
 
