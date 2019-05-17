@@ -23,33 +23,33 @@
                                      STYLESHEETS   
                                 ============================== -->
                                 <!-- BOOTSTRAP -->
-                                <link rel="stylesheet" href="css/bootstrap.min.css">
+                                <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
                                 
                                 <!-- FONT ICONS -->
-                                <link rel="stylesheet" href="assets/elegant-icons/style.css">
-                                <link rel="stylesheet" href="assets/app-icons/styles.css">
+                                <link rel="stylesheet" href="{{ asset('assets/elegant-icons/style.css') }}">
+                                <link rel="stylesheet" href="{{ asset('assets/app-icons/styles.css') }}">
                                 <!--[if lte IE 7]><script src="lte-ie7.js"></script><![endif]-->
                                 
                                 <!-- WEB FONTS -->
-                                <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,100italic,400,300italic' rel='stylesheet' type='text/css'>
+                                <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,100italic,400,300italic' rel='stylesheet' type='text/css'>
                                 
                                 <!-- CAROUSEL AND LIGHTBOX -->
-                                <link rel="stylesheet" href="css/owl.theme.css">
-                                <link rel="stylesheet" href="css/owl.carousel.css">
-                                <link rel="stylesheet" href="css/nivo-lightbox.css">
-                                <link rel="stylesheet" href="css/nivo_themes/default/default.css">
+                                <link rel="stylesheet" href="{{ asset('css/owl.theme.css') }}">
+                                <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}">
+                                <link rel="stylesheet" href="{{ asset('css/nivo-lightbox.css') }}">
+                                <link rel="stylesheet" href="{{ asset('css/nivo_themes/default/default.css') }}">
                                 
                                 <!-- ANIMATIONS -->
-                                <link rel="stylesheet" href="css/animate.min.css">
+                                <link rel="stylesheet" href="{{ asset('css/animate.min.css') }}">
                                 
                                 <!-- CUSTOM STYLESHEETS -->
-                                <link rel="stylesheet" href="css/styles.css">
+                                <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
                                 
                                 <!-- COLORS | CURRENTLY USED DIFFERENTLY TO SWITCH FOR DEMO. IN ORIGINAL FILE ALL COLORS LINK IS COMMENTED EXCEPT BLUE -->
-                                <link rel="stylesheet" href="css/colors/blue.css" title="blue">
+                                <link rel="stylesheet" href="{{ asset('css/colors/blue.css') }}" title="blue">
                                 
                                 <!-- RESPONSIVE FIXES -->
-                                <link rel="stylesheet" href="css/responsive.css">
+                                <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
                                 
                          
                                 
@@ -1061,21 +1061,21 @@
                                      SCRIPTS 
                                 ============================== -->
                                 
-                                <script src="js/bootstrap.min.js"></script>
-                                <script src="js/smoothscroll.js"></script>
-                                <script src="js/jquery.scrollTo.min.js"></script>
-                                <script src="js/jquery.localScroll.min.js"></script>
-                                <script src="js/owl.carousel.min.js"></script>
-                                <script src="js/nivo-lightbox.min.js"></script>
-                                <script src="js/simple-expand.min.js"></script>
-                                <script src="js/wow.min.js"></script>
-                                <script src="js/jquery.stellar.min.js"></script>
-                                <script src="js/retina-1.1.0.min.js"></script>
-                                <script src="js/jquery.nav.js"></script>
-                                <script src="js/matchMedia.js"></script>
-                                <script src="js/jquery.ajaxchimp.min.js"></script>
-                                <script src="js/jquery.fitvids.js"></script>
-                                <script src="js/custom.js"></script>
+                                <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+                                <script src="{{ asset('js/smoothscroll.js') }}"></script>
+                                <script src="{{ asset('js/jquery.scrollTo.min.js') }}"></script>
+                                <script src="{{ asset('js/jquery.localScroll.min.js') }}"></script>
+                                <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+                                <script src="{{ asset('js/nivo-lightbox.min.js') }}"></script>
+                                <script src="{{ asset('js/simple-expand.min.js') }}"></script>
+                                <script src="{{ asset('js/wow.min.js') }}"></script>
+                                <script src="{{ asset('js/jquery.stellar.min.js') }}"></script>
+                                <script src="{{ asset('js/retina-1.1.0.min.js') }}"></script>
+                                <script src="{{ asset('js/jquery.nav.js') }}"></script>
+                                <script src="{{ asset('js/matchMedia.js') }}"></script>
+                                <script src="{{ asset('js/jquery.ajaxchimp.min.js') }}"></script>
+                                <script src="{{ asset('js/jquery.fitvids.js') }}"></script>
+                                <script src="{{ asset('js/custom.js') }}"></script>
                         
                                 
                                 </body>
