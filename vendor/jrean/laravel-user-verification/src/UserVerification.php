@@ -75,7 +75,7 @@ class UserVerification
      */
     protected function generateToken()
     {
-        return hash_hmac('sha256', Str::random(40), config('app.key'));
+        return mt_rand(10000, 99999);
     }
 
     /**

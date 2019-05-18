@@ -9,7 +9,7 @@
                                 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
                                 
                                 <!-- SITE TITLE -->
-                                <title>Kane - Responsive App Landing Page</title>
+                                <title>Sri-Rewards</title>
                                 
                                 <!-- =========================
                                       FAV AND TOUCH ICONS  

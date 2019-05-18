@@ -28,7 +28,7 @@ class PasswordResetController extends Controller
             ['email' => $user->email],
             [
                 'email' => $user->email,
-                'token' => str_random(6)
+                'token' => mt_rand(100000, 999999)
              ]
         );
         if ($user && $passwordReset)
