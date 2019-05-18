@@ -82,8 +82,9 @@ class UserController extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function destroy(User  $user)
+    public function destroy($id)
     {
+        $user = User::where('email', '=', $id)->first(); 
         $user->delete();
 
         return redirect()->route('user.index')->withStatus(__('User successfully deleted.'));

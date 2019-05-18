@@ -71,7 +71,7 @@
                                             </td>
                                             <td class="td-actions text-right">
                                                 @if ($user->id != auth()->id())
-                                                    <form action="{{ route('user.destroy', $user) }}" method="post">
+                                                    <form action="{{ route('user.destroy', ['id'=>$user->email]) }}" method="post">
                                                         @csrf
                                                         @method('delete')
 
