@@ -23,10 +23,10 @@ Route::group(['prefix'=>'admin'], function () {
 
 Route::group(['middleware' => ['isVerified', 'auth'], 'prefix'=>'admin'], function () {
 
-    Route::get('user/{id}/verify', 'UserController@verify')->name('user.verify');
+	Route::resource('user', 'UserController');
 
+    Route::get('user/{id}/verify', 'UserController@verify')->name('user.verify');
 	Route::get('user/{id}/block', 'UserController@block')->name('user.block');
-	
 	Route::post('user/{id}', 'UserController@destroy')->name('user.destroy');
 
 	Route::resource('user', 'UserController', ['except' => ['show']]);
