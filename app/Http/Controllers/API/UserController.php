@@ -58,7 +58,7 @@ class UserController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return ApiWrapper::wrapApiResponse(['error'=>$validator->errors()], 'error_in_fields', 401);
+            return ApiWrapper::wrapApiResponse(['error'=>$validator->errors()], 'error_in_fields', 200);
         }
 
         $input = $request->all();
@@ -66,7 +66,7 @@ class UserController extends Controller
 
         if($user != null)
         {
-           return ApiWrapper::wrapApiResponse(['message'=>'Account has been registered with this email'], 'duplicate_email', 401);
+           return ApiWrapper::wrapApiResponse(['message'=>'Account has been registered with this email'], 'duplicate_email', 200);
         }
 
 
