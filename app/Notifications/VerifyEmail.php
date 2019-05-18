@@ -13,7 +13,7 @@ use Illuminate\Auth\Notifications\VerifyEmail as VerifyEmailBase;
 
 class VerifyEmail extends VerifyEmailBase
 {
-//    use Queueable;
+    use Queueable;
 
     /**
      * Get the verification URL for the given notifiable.
@@ -23,11 +23,10 @@ class VerifyEmail extends VerifyEmailBase
      */
     protected function verificationUrl($notifiable)
     {
-        $prefix = config('frontend.url') . config('frontend.email_verify_url');
-        $temporarySignedURL = URL::temporarySignedRoute(
-            'verification.verify', Carbon::now()->addMinutes(60), ['id' => $notifiable->getKey()]
-        );
-
-        return $prefix . urlencode($temporarySignedURL);
+        return (new MailMessage)
+        ->line('Thanks for registering with us. Tour email confirmation code is here.')
+        ->line('copy this code and enter the field on app.')
+        ->action($notifiable->getKey(), '#')
+        ->line('If you don\'t registered on SriReward please ignore this email..');
     }
 }
