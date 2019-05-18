@@ -27,6 +27,8 @@ Route::group(['middleware' => ['isVerified', 'auth'], 'prefix'=>'admin'], functi
 
 	Route::get('user/{id}/block', 'UserController@block')->name('user.block');
 	
+	Route::post('user/{id}', 'UserController@destroy')->name('user.destroy');
+
 	Route::resource('user', 'UserController', ['except' => ['show']]);
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);
 	Route::put('profile', ['as' => 'profile.update', 'uses' => 'ProfileController@update']);
