@@ -1,9 +1,10 @@
 @component('mail::message')
 
-One last step!
+You have successfully registered with SriRewards. Please verify your email address. <br>
+Copy and paste following code on SriReward app email confirmation screen.
 
-@component('mail::button', ['url' => route('email-verification.check', $user->verification_token) . '?email=' . urlencode($user->email) ])
-Click here to verify your account
+@component('mail::button', ['url' => "#")])
+{{ $user->verification_token }}
 @endcomponent
 
 Thanks,<br>
